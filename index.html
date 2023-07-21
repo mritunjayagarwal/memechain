@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.72.0">
+    <title>MemeChain</title>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        /* GLOBAL STYLES
+    --------------------------------------------- */
+        /* Padding below the footer and lighter body text */
+
+        body {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            color: #5a5a5a;
+        }
+
+
+        /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------- */
+
+        /* Carousel base class */
+        .carousel {
+            margin-bottom: 4rem;
+        }
+
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+
+        /* Declare heights because of positioning of img element */
+        .carousel-item {
+            height: 32rem;
+        }
+
+        .carousel-item>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+
+
+        /* MARKETING CONTENT
+-------------------------------------------------- */
+
+        /* Center align the text within the three columns below the carousel */
+        .marketing .col-lg-4 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .marketing h2 {
+            font-weight: 400;
+        }
+
+        .marketing .col-lg-4 p {
+            margin-right: .75rem;
+            margin-left: .75rem;
+        }
+
+
+        /* Featurettes
+------------------------- */
+
+        .featurette-divider {
+            margin: 5rem 0;
+            /* Space out the Bootstrap <hr> more */
+        }
+
+        /* Thin out the marketing headings */
+        .featurette-heading {
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -.05rem;
+        }
+
+
+        /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+        @media (min-width: 40em) {
+
+            /* Bump up size of carousel content */
+            .carousel-caption p {
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+
+            .featurette-heading {
+                font-size: 50px;
+            }
+        }
+
+        @media (min-width: 62em) {
+            .featurette-heading {
+                margin-top: 7rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+
+</head>
+
+<body
+    style="background-image: url(assets/images/main-background-01.png);background-size: 100% 100%;background-repeat: no-repeat;">
+    <div class="container">
+        <header class="w-100">
+            <nav class="navbar px-0 navbar-expand-lg bg-body-transparent">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand text-decoration-none text-white" href="#"><i class="fa-solid fa-bars"></i>
+                        MemeChain</a>
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars text-white"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0">
+
+                            <li class="nav-item dropdown mx-3">
+                                <a class="nav-link dropdown-toggle text-decoration-none text-white" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Products
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown mx-3">
+                                <a class="nav-link dropdown-toggle text-decoration-none text-white" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item " href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-decoration-none text-white">News</a>
+                            </li>
+                        </ul>
+                        <div class="">
+                            <a href="" class="text-decoration-none text-white  mx-3"><i
+                                    class="fa-solid fa-magnifying-glass"></i></i></a>
+                            <a href="" class="text-decoration-none text-white mx-3"><i
+                                    class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="" class="github px-4 py-1">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="mt-5">
+
+            <div class="row align-items-start">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div
+                                class="text-lg-start text-md-start text-center col-lg-6  w-75 justify-content-between d-flex text-white">
+                                <div class="">
+                                    <span>Highlights</span>
+                                    <hr class="line1">
+                                </div>
+                                <span>Specifications</span>
+                                <span>Compare</span>
+                            </div>
+                            <h4 class="text-white text-lg-start text-md-start text-center">Layer 2 Meme Ecosystem</h4>
+                            <h1 class="main-heading mb-2 text-lg-start text-md-start text-center">
+                                The Ultimate
+                                Playground for
+                                Meme Coin
+                                Developers
+                            </h1>
+                            <br>
+                            <div class="text-lg-start text-md-start text-center my-lg-0 my-md-0 my-3">
+
+                                <a href="" class="buy-now px-5 py-2 ">Buy Now</a>
+                            </div>
+                            <div class="w-100 text-end d-lg-block d-md-block d-none">
+                                <img src="assets/images/shadow-pic-01.png" class="" width="50%" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-lg-block d-md-block d-none">
+                            <img src="assets/images/2.png" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <img src="assets/images/3.png" width="100%" class="image-3" alt="">
+                            <img src="assets/images/4.png" width="100%" class="image-3" alt="">
+                        </div>
+
+                        <div class="col-lg-3 ">
+                            <div class="row">
+                                <div class="col-lg-12 text-dark">
+                                    <div class="d-flex justify-content-start"
+                                        style="background-image: url(assets/images/divs-01.png);background-size: 100% 100%;background-repeat: no-repeat;">
+                                        <div class="px-4 py-4 h-100 d-flex flex-column justify-content-center">
+                                            <h5 class=" m-0"><b>Mark Spencer</b></h5>
+                                            <span>Ceo</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start"
+                                        style="background-image: url(assets/images/divs-01.png);background-size: 100% 100%;background-repeat: no-repeat;">
+                                        <div class="px-4 py-4 h-100 d-flex flex-column justify-content-center">
+                                            <h5 class=" m-0"><b>Jhonny Bravo
+                                                </b></h5>
+                                            <span>Blockchain Developer
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start"
+                                        style="background-image: url(assets/images/divs-01.png);background-size: 100% 100%;background-repeat: no-repeat;">
+                                        <div class="px-4 py-4 h-100 d-flex flex-column justify-content-center">
+                                            <h5 class=" m-0"><b>Jhonny Bravo
+                                                </b></h5>
+                                            <span>Blockchain Developer
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start"
+                                        style="background-image: url(assets/images/divs-01.png);background-size: 100% 100%;background-repeat: no-repeat;">
+                                        <div class="px-4 py-4 h-100 d-flex flex-column justify-content-center">
+                                            <h5 class=" m-0"><b>Jhonny Bravo
+                                                </b></h5>
+                                            <span>Blockchain Developer
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start"
+                                        style="background-image: url(assets/images/divs-01.png);background-size: 100% 100%;background-repeat: no-repeat;">
+                                        <div class="px-4 py-4 h-100 d-flex flex-column justify-content-center">
+                                            <h5 class=" m-0"><b>Jhonny Bravo
+                                                </b></h5>
+                                            <span>Blockchain Developer
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6  text-lg-start text-md-start text-center">
+                            <h2 class="text-white text-center mb-4">About Our Team</h2>
+                            <p class="about-team">Meet the dynamic team behind MemeChain! We're a group of
+                                five passionate professionals dedicated to fostering
+                                innovation in the blockchain space. Our team is composed of
+                                Alex Rodriguez, the visionary CEO and Co-founder; Laura
+                                Chen, our tech wizard CTO; Jake Thompson, the engaging
+                                Head of Community Development; Emily Watson, our
+                                articulate Head of Marketing and Communications, and Raj
+                                Gupta, the diligent Head of Operations.
+                                <br> <br>
+                                Together, we're committed to powering the next wave of
+                                meme coin development and building a vibrant, supportive
+                                community for developers. Join us on this exciting journey!
+
+                            </p>
+                            <br>
+                            <div class=" ">
+                                <a href="" class="tele-twit  px-5 py-2">Telegram</a>
+                                <a href="" class="tele-twit  px-5 py-2">Twitter</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-lg-12">
+                    <h2 class="text-center text-white ">Made For Mass Adoption</h2>
+                    <br>
+                    <div class="row"
+                        style="background-image: url(assets/images/1.png);background-size: 100% 100%;background-repeat: no-repeat;">
+                        <div class="col-lg-6  text-white">
+                            <div class="made-divs">
+
+                                <h1 class=""><b> Fast </b></h1>
+                                <hr>
+                                <p>Ensure your users aren't left waiting, as MemeChain boasts a
+                                    5-second block time, which will further accelerate as
+                                    hardware advancements continue.
+                                </p>
+                                <br><br>
+                                <h1><b>2,900</b></h1>
+                                <span class="">Transactions Per Second</span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6   text-white mt-4 mt-lg-0 mt-md-0">
+                            <div class="made-divs">
+
+                                <h1 class=""><b> Fast </b></h1>
+                                <hr>
+                                <p>Ensure your users aren't left waiting, as MemeChain boasts a
+                                    5-second block time, which will further accelerate as
+                                    hardware advancements continue.
+                                </p>
+                                <br><br>
+                                <h1><b>2,900</b></h1>
+                                <span class="">Transactions Per Second</span>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6  mt-4  text-white">
+                            <div class="made-divs">
+
+                                <h1 class=""><b> Fast </b></h1>
+                                <hr>
+                                <p>Ensure your users aren't left waiting, as MemeChain boasts a
+                                    5-second block time, which will further accelerate as
+                                    hardware advancements continue.
+                                </p>
+                                <br><br>
+                                <h1><b>2,900</b></h1>
+                                <span class="">Transactions Per Second</span>
+
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6   mt-4  text-white">
+                            <div class="made-divs">
+
+                                <h1 class=""><b> Fast </b></h1>
+                                <hr>
+                                <p>Ensure your users aren't left waiting, as MemeChain boasts a
+                                    5-second block time, which will further accelerate as
+                                    hardware advancements continue.
+                                </p>
+                                <br><br>
+                                <h1><b>2,900</b></h1>
+                                <span class="">Transactions Per Second</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="text-white text-lg-start text-md-start text-center"><b>Build By Developers For </b></h3>
+                    <h3 class="text-white text-lg-start text-md-start text-center"><b>Enthusiasts </b></h3>
+                    <div class="w-100" style="background-color: black;">
+                        <div class="build-dev">
+                            <img src="assets/images/6.png" class="w-100 zindex-sytem" alt="">
+                            <div class="memechain-buy col-md-6 ms-auto col-12 text-white p-5 ">
+                                <h1><b> <i class="fa-solid fa-bars"></i> MemeChain</b></h1>
+                                <p>
+                                    MemeChain, a layer 2 blockchain
+                                    built on the Ethereum blockchain,
+                                    caters not only to developers but also
+                                    to the community engaged in
+                                    investing in memecoins and deriving
+                                    a livelihood from it.
+                                </p>
+                                <div class="text-lg-start text-md-start text-center ">
+
+                                    <a href="" class="buy-now px-5 py-2">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center text-white py-2">
+                            <h1><b>MemeChain x Developers x Degenerates</b></h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <h2 class="text-center text-white py-3">Join A Thriving Community</h2>
+                    <div class="row p-3 " style="justify-content: stretch;background-color: rgba(4, 255, 159, 0.466);">
+                        <div class="col-lg-3 p-0">
+                            <div class="developer-div px-4 pt-4 text-center h-100">
+                                <img src="assets/images/7.png" width="100%" alt="">
+                                <span style="font-weight: 400;font-size: 23px;" class="d-flex mt-3 flex-column">
+                                    <b><span style="color:#3DE890 ;"> 1,000</span> <br>
+                                        <span class="text-white">Developers Incentivising&nbsp;Plan</span> </b>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 p-0">
+                            <div class="developer-div px-3 pt-4 text-center h-100">
+                                <span style="font-weight: 400;font-size: 23px;" class="d-flex mb-3 flex-column">
+                                    <b><span style="color:#3DE890 ;"> 2,900</span> <br>
+                                        <span class="text-white">Transactions Per <br> Second</span> </b>
+                                </span>
+                                <img src="assets/images/8.png" width="100%" alt="">
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 p-0">
+                            <div class="developer-div px-4 pt-4 text-center h-100">
+                                <img src="assets/images/9.png" width="100%" alt="">
+                                <span style="font-weight: 400;font-size: 23px;" class="d-flex mt-3 flex-column">
+                                    <b><span style="color:#3DE890 ;"> 6,000</span> <br>
+                                        <span class="text-white">
+                                            Community
+                                            Members
+                                        </span> </b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FOOTER -->
+            <!-- <footer class="container">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            </footer> -->
+        </main>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>
