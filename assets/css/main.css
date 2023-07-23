@@ -1,3 +1,50 @@
+* {
+   margin: 0;
+   scroll-behavior: smooth;
+ }
+ 
+ ::-webkit-scrollbar {
+   display: none;
+ }
+
+main {
+   position: fixed;
+   top: -49px;
+   left: 0;
+   /*  note vh and vw switched  */
+   width: 100vh;
+   height: 100vw;
+   /*    */
+   transform-origin: top left;
+   transform: rotate(-90deg) translateX(-100vh);
+   background-image: url(../images/main-background-01.png);background-size: 100% 100%;background-repeat: no-repeat;
+   overflow-x: hidden;
+   overflow-y: scroll;
+   /*   scroll-snap-type: y mandatory; */
+ }
+ 
+ article {
+   display: flex;
+   flex-direction: row;
+   width: fit-content;
+   height: fit-content;
+   transform-origin: top left;
+   transform: rotate(90deg) translateY(-100vh);
+ } 
+
+ section {
+   width: 100vw;
+   height: 100vh;
+   position: relative;
+   /*   scroll-snap-align: start; */
+   overflow-y: hidden;
+   color: #fff;
+   padding-top: 100px;
+   /*  backface visibility keeps font from looking weird  */
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+ }
+
  .github {
     background-color: white;
     border-radius: 20px;
@@ -5,7 +52,6 @@
     color: black;
 
  }
-
  .line1 {
     padding: 5px;
  }
@@ -14,6 +60,7 @@
     color: white;
     font-size: 40pt;
     font-weight: 400;
+    text-align: center;
  }
 
  .buy-now {
@@ -49,7 +96,7 @@
     background-color: #153622b9;
     border: 2px solid #00a542;
     border-radius: 10px;
-    padding: 5%;
+    padding: 1em;
  }
 
  .build-dev {
@@ -87,6 +134,21 @@
 
  .developer-div {
     background-color: #0B1916;
+ }
 
+ @media only screen and (max-width: 700px) {
+   .main-heading {
+      font-size: 30pt !important;
+     text-align: left !important;
+   }
+
+   .about-team {
+      font-size: 12pt;
+      text-align: left;
+   }
+
+   .bg-main{
+      background-size: 200% 100% !important;
+   }
  }
 
