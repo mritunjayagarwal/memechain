@@ -150,19 +150,18 @@ main {
     background-color: #0B1916;
  }
 
- @media only screen and (max-width: 700px) {
+ .built-temp{
+   display: none
+ }
+
+ @media only screen and (max-width: 1400px) {
    .main-heading {
       font-size: 30pt !important;
      text-align: left !important;
    }
 
-   .about-team {
-      font-size: 12pt;
-      text-align: left;
-   }
-
-   .bg-main{
-      background-size: 200% 100% !important;
+   .mad-divs p{
+      font-size: 10px !important;
    }
  }
 
@@ -221,6 +220,14 @@ main {
       background: #000;
       padding: 20px 0;
       margin: 0 10px;
+    }
+
+    .built-main{
+      display: none;
+    }
+
+    .built-temp{
+      display: block;
     }
  }
 
