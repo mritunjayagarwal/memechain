@@ -9,7 +9,6 @@
 
 main {
    position: fixed;
-   top: -49px;
    left: 0;
    /*  note vh and vw switched  */
    width: 100vh;
@@ -151,12 +150,6 @@ main {
     background-color: #0B1916;
  }
 
- @media only screen and (max-width: 1700px) {
-   p{
-      font-size: 15px !important;
-   }
- }
-
  @media only screen and (max-width: 700px) {
    .main-heading {
       font-size: 30pt !important;
@@ -171,5 +164,63 @@ main {
    .bg-main{
       background-size: 200% 100% !important;
    }
+ }
+
+ @media only screen and (max-width: 700px) {
+   .container{
+      min-width: 100% !important;
+   }
+   .main-para{
+      font-size: 15px !important;
+   }
+   .main-heading{
+      font-size: 35px !important;
+      margin: 30px 0 !important;
+   }
+   section:nth-of-type(1){
+      height: 100vh !important;
+   }
+   main {
+      position: unset;
+      /*  note vh and vw switched  */
+      width: 100% !important;
+      height: 100% !important;
+      /*    */
+      transform-origin: unset;
+      transform: unset !important;
+      overflow-x: unset !important;
+      overflow-y: unset !important;
+      /*   scroll-snap-type: y mandatory; */
+    }
+  
+    article {
+      display: unset !important;
+      flex-direction: unset !important;
+      width: fit-content;
+      height: fit-content;
+      transform-origin: unset !important;
+      transform: unset !important;
+    }
+  
+    section {
+      width: 100% !important;
+      height: 100%;
+      overflow-x: hidden !important;
+      padding: 50px 0 !important;
+    }
+
+    .high-sec {
+      padding: 0 10px
+    }
+
+    .made-divs p{
+      font-size: 15px;
+    }
+
+    .navbar-collapse{
+      background: #000;
+      padding: 20px 0;
+      margin: 0 10px;
+    }
  }
 
