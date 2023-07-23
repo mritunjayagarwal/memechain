@@ -70,6 +70,10 @@ main {
     text-align: center;
  }
 
+ .main-para{
+   font-size: 22px !important;
+ }
+
  p{
    font-size: 30px;
  }
