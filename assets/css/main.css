@@ -154,6 +154,28 @@ main {
    display: none
  }
 
+ .footer{
+   background-color: #00ffb3;
+   border-radius: 10px;
+   margin-left: 50px;
+}
+.inner-footer{
+   background-color: #0B1916;
+   border-radius: 10px;
+ }
+ .social-link{
+   background-color: #00ffb352;
+   /* padding: 10px; */
+   color: white;
+ }
+ .main-links{
+   margin-top: 70px;
+   margin-bottom: 10px;
+ }
+ .main-links > span{
+   margin-top: 10px;
+ }
+
  @media only screen and (max-width: 1400px) {
    .main-heading {
       font-size: 30pt !important;
@@ -229,5 +251,10 @@ main {
     .built-temp{
       display: block;
     }
+
+    .footer{
+      margin-left: unset;
+      margin-bottom: -92px;
+   }
  }
 
